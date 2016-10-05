@@ -4,6 +4,7 @@
 	include get_template_directory() . '/inc/actions.php';
 	include get_template_directory() . '/inc/config.php';
 	include get_template_directory() . '/inc/posts.php';
+	include get_template_directory() . '/inc/widgets.php';
 	include get_template_directory() . '/inc/helpers.php';
 
 	// Modo mantenimiento para no logueados
