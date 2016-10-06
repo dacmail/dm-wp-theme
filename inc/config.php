@@ -1,4 +1,4 @@
-<?php 
+<?php
 	//Theme setup
 	function ungrynerd_setup() {
 		load_theme_textdomain('ungrynerd', get_template_directory() . '/languages');
@@ -19,8 +19,9 @@
 		if ( function_exists('register_nav_menus')) {
 			register_nav_menus(
 				array(
-				  'main' => esc_html__('Menu principal', 'ungrynerd'),
-				  'secondary' => 'Menu secundario'
+				  'main-column-1' => esc_html__('Menu principal (Columna 1)', 'ungrynerd'),
+				  'main-column-2' => esc_html__('Menu principal (Columna 2)', 'ungrynerd'),
+				  'main-column-3' => esc_html__('Menu principal (Columna 3)', 'ungrynerd'),
 				)
 			);
 		}
@@ -54,5 +55,5 @@
 		 	'name' => esc_html__('Barra Lateral', 'ungrynerd')
 		));
 	}
-	add_action('widgets_init', 'ungrynerd_widgets_init');	
+	add_action('widgets_init', 'ungrynerd_widgets_init');
 ?>

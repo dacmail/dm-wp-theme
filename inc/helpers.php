@@ -1,4 +1,4 @@
-<?php 
+<?php
 	// Listado de comentarios
 	function comentarios($comment, $args, $depth) {
 	   $GLOBALS['comment'] = $comment; ?>
@@ -17,5 +17,9 @@
 	    	</div>
 	     </article>
 	<?php
+	}
+
+	function ungrynerd_path($path='') {
+		echo get_template_directory_uri() . $path;
 	}
 ?>

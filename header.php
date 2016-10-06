@@ -6,21 +6,41 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<header class="navbar" id="header">
+	<aside class="pre-header">
 		<div class="container">
-			<div class="navbar-header">
-				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-menu">
-					<span class="sr-only"><?php _e('Toggle navigation', 'ungrynerd'); ?></span>
-					<?php _e('Menu', 'ungrynerd'); ?>
-				</button>
-				<a href="<?php echo esc_url(home_url('/')); ?>" class="logo navbar-brand"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" /></a>
-			</div>
-			<?php wp_nav_menu(array('container' => 'nav',
-								'container_id' => 'main-menu', 
-								'container_class' => 'collapse width navbar-collapse', 
-								'menu_class' => 'nav navbar-nav',
-								'theme_location' => 'main',
-								'fallback_cb' => false)); ?>
-
-		</div> <!--- /.container -->
+			Noticias del Ayuntamiento de Madrid
+			<img class="logo-madrid" src="<?php ungrynerd_path('/images/logo_madrid.png') ?>" alt="Ayuntamiento de Madrid">
+		</div>
+	</aside>
+	<header class="navbar header" id="header">
+		<div class="container">
+			<a href="<?php echo esc_url(home_url('/')); ?>" class="logo">Diario de Madrid</a>
+			<button class="menu-toggle" type="button" data-toggle="collapse" data-target="#menus">
+				<span class="sr-only"><?php _e('Menu', 'ungrynerd'); ?></span>
+				<i class="fa fa-bars"></i>
+			</button>
+		</div>
 	</header>
+	<div class="container">
+		<div class="row">
+			<nav id="menus" class="collapse">
+				<div class="col-sm-4">
+					<?php wp_nav_menu(array('menu_class' => 'nav navbar-nav',
+									'theme_location' => 'main-column-1',
+									'fallback_cb' => false)); ?>
+				</div>
+				<div class="col-sm-4">
+					<?php wp_nav_menu(array('menu_class' => 'nav navbar-nav',
+									'theme_location' => 'main-column-2',
+									'fallback_cb' => false)); ?>
+				</div>
+				<div class="col-sm-4">
+					<?php wp_nav_menu(array('menu_class' => 'nav navbar-nav',
+									'theme_location' => 'main-column-3',
+									'fallback_cb' => false)); ?>
+				</div>
+			</nav>
+
+		</div>
+
+	</div>
