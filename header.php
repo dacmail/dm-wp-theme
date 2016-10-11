@@ -22,7 +22,7 @@
 		</div>
 	</header>
 	<div class="container">
-		<nav id="menus" class="collapse">
+		<nav id="menus" class="menus collapse">
 			<div class="row">
 				<div class="col-sm-4">
 					<?php wp_nav_menu(array('menu_class' => 'nav navbar-nav',

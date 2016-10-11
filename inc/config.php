@@ -82,6 +82,14 @@
 		 	'name' => esc_html__('Columna 3', 'ungrynerd')
 		));
 		register_sidebar(array(
+			'id' => 'sidebar-home',
+		    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		    'after_widget' => '</div>',
+		    'before_title' => '<h2 class="title">',
+		 	'after_title' => '</h2>',
+		 	'name' => esc_html__('Barra Lateral Home', 'ungrynerd')
+		));
+		register_sidebar(array(
 			'id' => 'sidebar-1',
 		    'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		    'after_widget' => '</div>',
