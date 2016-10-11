@@ -22,4 +22,31 @@
 	function ungrynerd_path($path='') {
 		echo get_template_directory_uri() . $path;
 	}
+
+	function the_first_tag() {
+		global $post;
+		$posttags = get_the_tags($post->ID);
+		if ($posttags) { ?>
+			<div class="post-tag-wrapper">
+				<div class="post-tag">
+			  		<?php echo $posttags[0]->name ?>
+		  		</div>
+	  		</div>
+		<?php
+		}
+	}
+
+	function the_blog_title($site_id) {
+		global $post;
+		if ($site_id!=get_current_blog_id()) {
+			$blog_details = get_blog_details(get_current_blog_id());
+		?>
+			<div class="blog-name-wrapper">
+				<a  href="<?php echo $blog_details->siteurl ?>" class="blog-name">
+					<?php echo $blog_details->blogname; ?>
+				</a>
+			</div>
+		<?php
+		}
+	}
 ?>

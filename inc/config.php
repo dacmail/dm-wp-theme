@@ -12,7 +12,10 @@
 		// Soporte para miniaturas y definición de tamaños
 		add_theme_support('post-thumbnails');
 		if ( function_exists('add_image_size')) {
-			add_image_size('featured', 800, 400, true);
+			add_image_size('un_huge', 1500, 1000, false);
+			add_image_size('un_big', 750, 500, false);
+			add_image_size('un_medium', 460, 300, false);
+			add_image_size('un_small', 270, 175, false);
 		}
 
 		// Definición menús
@@ -46,6 +49,38 @@
 
 	// Widgets zones definition
 	function ungrynerd_widgets_init() {
+		register_sidebar(array(
+			'id' => 'main-featured',
+		    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		    'after_widget' => '</div>',
+		    'before_title' => '<h2 class="title">',
+		 	'after_title' => '</h2>',
+		 	'name' => esc_html__('Destacado principal', 'ungrynerd')
+		));
+		register_sidebar(array(
+			'id' => 'column-1',
+		    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		    'after_widget' => '</div>',
+		    'before_title' => '<h2 class="title">',
+		 	'after_title' => '</h2>',
+		 	'name' => esc_html__('Columna 1', 'ungrynerd')
+		));
+		register_sidebar(array(
+			'id' => 'column-2',
+		    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		    'after_widget' => '</div>',
+		    'before_title' => '<h2 class="title">',
+		 	'after_title' => '</h2>',
+		 	'name' => esc_html__('Columna 2', 'ungrynerd')
+		));
+		register_sidebar(array(
+			'id' => 'column-3',
+		    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		    'after_widget' => '</div>',
+		    'before_title' => '<h2 class="title">',
+		 	'after_title' => '</h2>',
+		 	'name' => esc_html__('Columna 3', 'ungrynerd')
+		));
 		register_sidebar(array(
 			'id' => 'sidebar-1',
 		    'before_widget' => '<div id="%1$s" class="widget %2$s">',

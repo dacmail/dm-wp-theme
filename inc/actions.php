@@ -43,6 +43,12 @@
 					'1.0.0',
 					true);
 				wp_enqueue_script(
+					'owl-carousel-2',
+					get_template_directory_uri() . '/assets/scripts/owl.carousel.min.js',
+					array('jquery'),
+					'2.1.6',
+					true);
+				wp_enqueue_script(
 					'ungrynerd-main',
 					get_template_directory_uri() . '/assets/scripts/main.js',
 					array('jquery'),

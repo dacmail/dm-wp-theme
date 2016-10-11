@@ -1,5 +1,7 @@
 @import (inline) "bootstrap.css";
 @import (inline) "font-awesome.css";
+@import (inline) "owl.carousel.min.css";
+@import (inline) "owl.theme.default.min.css";
 @import "wp_defaults.less";
 @import 'https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Lato:300,400,700,900';
 
@@ -7,20 +9,31 @@
 
 @brand: #003df6;
 @light: #f1f1f1;
-@dark: #333333;
-@white: #ffffff;
+@dark: #333;
+@white: #fff;
+@text: #666;
 
 /* Text styles */
 
-.firma {
+.post-author {
     font-family: Lato;
     font-size: 13px;
     color: @dark;
+    margin-bottom: 10px;
 }
 .post-title {
     font-family: DroidSerif;
     font-size: 30px;
     line-height: 1.2;
+    clear: both;
+    color: #000;
+    margin-top:0px;
+    a {
+        color:#000;
+    }
+    .post-tag-wrapper + &, .blog-name-wrapper + & {
+        margin-top:20px;
+    }
 }
 .post-tag {
     font-family: Lato;
@@ -30,6 +43,35 @@
     background-color: @brand;
     display: inline-block;
     padding:6px 10px;
+    text-transform: capitalize;
+}
+.blog-name {
+    font-family: Lato;
+    font-size: 15px;
+    font-weight: 900;
+    color: @white;
+    display: inline-block;
+    background-color: #000000;
+    padding:6px 10px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    &:hover {
+        color:@white;
+        text-decoration: none;
+    }
+}
+.post-content {
+    font-family: Lato;
+    font-size: 16px;
+    line-height: 1.2;
+    color: @text;
+}
+a {
+    color:@brand;
+    &:hover {
+        color:@brand;
+        text-decoration: none;
+    }
 }
 
 /*
@@ -72,13 +114,61 @@
         }
     }
 }
+/*
+    TAG CAROUSEL
+*/
+.tag-cloud {
+    padding: 14px 0px 24px 0px;
+    border-bottom:2px solid #000;
+    margin-bottom: 40px;
+    .title {
+        display: block;
+        float: left;
+        margin-right: 30px;
+        font-family: Lato;
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 13px;
+        padding-bottom: 11px;
+        color: #000000;
+        text-transform: uppercase;
+        background:url('../../images/hash.png') no-repeat top left;
+        background-size: 24px;
+        padding-left: 40px;
+    }
+    .tag-carousel {
+        padding-right: 50px;
+        .owl-item  {
+            a {
+                font-family: Lato;
+                font-size: 16px !important;
+                color: @dark;
+                display: block;
+                line-height: 12px;
+            }
+        }
+    }
 
+    .owl-nav {
+        position: absolute;
+        top:-10px;
+        right: -5px;
+        .owl-prev, .owl-next {
+            display: inline-block;
+            font-size: 30px;
+            line-height: 30px;
+            padding:0px 5px;
+        }
+    }
+}
 /*
     MENU
 */
 #menus {
     float: none;
     width: 100%;
+    border-bottom:2px solid #000;
+    margin-bottom: 20px;
     .nav {
         > .menu-item {
             float: none;
@@ -133,5 +223,113 @@
             }
         }
     }
-
 }
+
+/*
+    POST SHARE
+*/
+.post-share {
+    font-size: 18px;
+    line-height: 30px;
+    position: relative;
+    display: inline-block;
+    padding-right: 10px;
+    a {
+       color:#000;
+    }
+    .share-over {
+        border-bottom:2px solid #000;
+    }
+    .share-buttons {
+        position: absolute;
+        right:-140px;
+        width: 140px;
+        top: 0px;
+        display: none;
+        background: @white;
+        z-index: 99;
+        a {
+            display: inline-block;
+            width: 30px;
+            line-height: 30px;
+            text-align: center;
+            &:hover {
+                color:@brand;
+            }
+        }
+    }
+    &:hover {
+        .share-buttons {
+            display: block;
+        }
+    }
+}
+
+/*
+    HOMEPAGE: MAIN FEATURED BLOCK
+*/
+.main-featured {
+    position: relative;
+    margin-bottom: 40px;
+    .wp-post-image {
+        width: 100%;
+        height: auto;
+    }
+    .post-wrap {
+        position: absolute;
+        background-color: @white;
+        padding:20px;
+        left:30px;
+        bottom: 30px;
+        margin-right: 30px;
+        .post-title {
+            font-size: 35px;
+        }
+        .blog-name {
+            font-size: 20px;
+        }
+        .post-share {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+    }
+}
+/*
+    HOMEPAGE: GENERIC POST COLUMN
+*/
+.post-column {
+    margin-bottom: 45px;
+    .wp-post-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 3px;
+    }
+}
+/*
+    HOMEPAGE: COLUMN 1 BLOCK
+*/
+.column-1 {
+    .blog-name {
+        font-size: 20px;
+    }
+}
+
+/*
+    HOMEPAGE: COLUMN 2 BLOCK
+*/
+.column-2 {
+    .post-title {
+        font-size: 25px;
+    }
+}
+
+/*
+    HOMEPAGE: COLUMN 3 BLOCK
+*/
+.column-3 {
+    .post-title {
+        font-size: 20px;
+    }
+}
+

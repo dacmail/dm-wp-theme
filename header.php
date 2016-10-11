@@ -22,8 +22,8 @@
 		</div>
 	</header>
 	<div class="container">
-		<div class="row">
-			<nav id="menus" class="collapse">
+		<nav id="menus" class="collapse">
+			<div class="row">
 				<div class="col-sm-4">
 					<?php wp_nav_menu(array('menu_class' => 'nav navbar-nav',
 									'theme_location' => 'main-column-1',
@@ -39,8 +39,12 @@
 									'theme_location' => 'main-column-3',
 									'fallback_cb' => false)); ?>
 				</div>
-			</nav>
-
+			</div>
+		</nav>
+		<div class="tag-cloud">
+			<span class="title">Destacados</span>
+			<div class="tag-carousel owl-carousel">
+				<?php wp_tag_cloud() ?>
+			</div>
 		</div>
-
 	</div>

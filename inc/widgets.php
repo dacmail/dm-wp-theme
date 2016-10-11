@@ -2,24 +2,22 @@
 class widget_post_block extends WP_Widget {
 
     function widget_post_block() {
-        parent::WP_Widget(false, $name = 'Bloque articulo');
+        parent::WP_Widget(false, $name = 'Bloque articulo', array('description' => 'Atículo para portada, muestra imagen destacada si la hay'));
     }
 
     function widget($args, $instance) {
         extract( $args );
         $title = apply_filters( 'widget_title', $instance['title'] );
-        $type = $instance['type'];
         $site_id = $instance['site_id'];
         $selected_post  = $instance['selected_post'];
         ?>
-            <?php include(get_template_directory() . '/templates/home-blocks.php'); ?>
+            <?php include(get_template_directory() . '/templates/' . $args['id'] . '.php'); ?>
         <?php
     }
 
     function update($new_instance, $old_instance) {
         $instance = $old_instance;
         $instance['selected_post'] = strip_tags($new_instance['selected_post']);
-        $instance['type'] = strip_tags($new_instance['type']);
         $instance['site_id'] = strip_tags($new_instance['site_id']);
         $instance['title'] = get_the_title(strip_tags($new_instance['selected_post']));
         return $instance;
@@ -32,7 +30,6 @@ class widget_post_block extends WP_Widget {
         else {
             $title = __( 'New title', 'ungrynerd' );
         }
-        $type = esc_attr($instance['type']);
         $site_id = esc_attr($instance['site_id']);
         $selected_post = esc_attr($instance['selected_post']);
         $sites = get_sites();
@@ -46,19 +43,11 @@ class widget_post_block extends WP_Widget {
                 <?php endforeach ?>
             </select>
         </p>
-        <p>
-            <label for="<?php echo $this->get_field_id('type'); ?>"><?php _e('Tipo', 'ungrynerd'); ?></label>
-            <select id="<?php echo $this->get_field_id('type'); ?>" class="widefat" name="<?php echo $this->get_field_name('type'); ?>">
-                <option value="col-md-12" <?php echo $type=='col-md-12' ? 'selected' : ''; ?>><?php _e('3 columnas', 'ungrynerd'); ?></option>
-                <option value="col-md-8" <?php echo $type=='col-md-8' ? 'selected' : ''; ?>><?php _e('2 columnas', 'ungrynerd'); ?></option>
-                <option value="col-md-4"<?php echo $type=='col-md-4' ? 'selected' : ''; ?>><?php _e('1 columna', 'ungrynerd'); ?></option>
-            </select>
-        </p>
         <?php if (!empty($site_id)): ?>
             <?php
                 $original_blog_id = get_current_blog_id();
                 switch_to_blog($site_id);
-                $posts = new WP_Query(array('post_type' => array('post','article'), 'posts_per_page' => -1, 'post_status' => 'publish'));
+                $posts = new WP_Query(array('post_type' => array('post'), 'posts_per_page' => -1, 'post_status' => 'publish'));
             ?>
             <p>
                 <label for="<?php echo $this->get_field_id('selected_post'); ?>"><?php _e('Articulo', 'ungrynerd'); ?></label>
