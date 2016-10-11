@@ -405,6 +405,7 @@ a {
     background-color: @brand;
     padding:20px;
     color:@white;
+    margin-bottom: 40px;
     .title {
         font-family: Lato;
         font-size: 30px;
@@ -461,7 +462,63 @@ a {
     }
 }
 
-
+/*
+    SIDEBAR WIDGETS
+*/
+.widget {
+    margin-bottom: 40px;
+    .title {
+        font-family: Lato;
+        font-size: 30px;
+        font-weight: 900;
+        color: #000;
+        text-transform: uppercase;
+        line-height: 24px;
+        position: relative;
+        margin-bottom:35px;
+        padding-right: 50px;
+        &:after {
+            width: 50px;
+            height: 5px;
+            background: #000;
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 0px;
+        }
+    }
+    &.grupos-municipales {
+        padding: 0px 20px;
+        .post {
+            font-family: Lato;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.2;
+            padding-left: 84px;
+            min-height: 64px;
+            margin-bottom: 20px;
+            a {
+                color: #000;
+            }
+            &.category-grupomunicipalsocialistamadrid {
+                background:url('../../images/avatar_psoe.png') no-repeat;
+                background-size: 64px;
+            }
+            &.category-grupomunicipalpartidopopular {
+                background:url('../../images/avatar_pp.png') no-repeat;
+                background-size: 64px;
+            }
+            &.category-grupomunicipalahoramadrid {
+                background:url('../../images/avatar_ahoramadrid.png') no-repeat;
+                background-size: 64px;
+            }
+            &.category-grupomunicipalciudadanos {
+                background:url('../../images/avatar_ciudadanos.png') no-repeat;
+                background-size: 64px;
+            }
+        }
+    }
+}
 /*
     FOOTER
 */
