@@ -2,5 +2,5 @@
 <?php if (!empty($author)): ?>
     <?php echo $author; ?>
 <?php else: ?>
-    <?php the_author_posts_link(); ?>
+    <?php the_author(); ?>
 <?php endif ?>
