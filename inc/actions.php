@@ -122,3 +122,31 @@
 		add_filter( 'style_loader_tag', 'enqueue_less_styles', 5, 2);
 	}
 
+
+	//Customize archives title
+	add_filter('get_the_archive_title', function($title) {
+		if ( is_category() ) {
+	        $title = sprintf( __( 'Categoría %s' ), '<span class="term">' .single_cat_title( '', false ) . '</span>');
+	    } elseif ( is_tag() ) {
+	        $title = sprintf( __( 'Etiqueta %s' ), '<span class="term">' .single_tag_title( '', false ) . '</span>');
+	    } elseif ( is_author() ) {
+	        $title = sprintf( __( 'Autor %s' ), '<span class="term">' . get_the_author() . '</span>' );
+	    } elseif ( is_year() ) {
+	        $title = sprintf( __( 'Búsqueda por año %s' ), '<span class="term">' .get_the_date( _x( 'Y', 'yearly archives date format' ) ) . '</span>');
+	    } elseif ( is_month() ) {
+	        $title = sprintf( __( 'Búsqueda por mes %s' ), '<span class="term">' .get_the_date( _x( 'F Y', 'monthly archives date format' ) ) . '</span>');
+	    } elseif ( is_day() ) {
+	        $title = sprintf( __( 'Búsqueda por día %s' ), '<span class="term">' .get_the_date( _x( 'F j, Y', 'daily archives date format' ) ) . '</span>');
+	    } elseif ( is_post_type_archive() ) {
+	        $title = sprintf( __( 'Archivos %s' ), '<span class="term">' .post_type_archive_title( '', false ) . '</span>');
+	    } elseif ( is_tax() ) {
+	        $tax = get_taxonomy( get_queried_object()->taxonomy );
+	        $title = sprintf( __( '%1$s %2$s' ), $tax->labels->singular_name, '<span class="term">' . single_term_title( '', false ) . '</span>');
+	    } elseif (is_search()) {
+	    	$title = sprintf( __( 'Resultados de búsqueda %s' ), '<span class="term">' . get_search_query() . '</span>');
+	    } else {
+	        $title = __( 'Archivos' );
+	    }
+	    return $title;
+	});
+

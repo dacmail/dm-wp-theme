@@ -16,6 +16,7 @@
 			add_image_size('un_big', 750, 500, false);
 			add_image_size('un_medium', 460, 300, false);
 			add_image_size('un_small', 270, 175, false);
+			add_image_size('un_square', 330, 330, true);
 		}
 
 		// Definición menús

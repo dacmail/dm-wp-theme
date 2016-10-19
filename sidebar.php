@@ -1,3 +1,6 @@
-<aside id="sidebar" class="col-sm-3">
+<aside class="sidebar">
 	<?php dynamic_sidebar("sidebar-1"); ?>
+    <?php get_template_part('templates/follow-us') ?>
+    <?php get_template_part('templates/press') ?>
+    <?php get_template_part('templates/grupos-municipales') ?>
 </aside>
