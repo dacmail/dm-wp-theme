@@ -18,7 +18,7 @@
 .post-author {
     font-family: Lato;
     font-size: 13px;
-    color: @dark;
+    color: #000;
     margin-bottom: 10px;
 }
 .post-title {
@@ -30,6 +30,9 @@
     margin-top:0px;
     a {
         color:#000;
+        &:hover {
+            color:#000;
+        }
     }
     .post-tag-wrapper + &, .blog-name-wrapper + & {
         margin-top:20px;
@@ -44,6 +47,13 @@
     display: inline-block;
     padding:6px 10px;
     text-transform: capitalize;
+    transition: padding 0.2s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+    border-right: 0px;
+    &:hover {
+        color: @white;
+        text-decoration: none;
+        padding-right: 18px;
+    }
 }
 .blog-name {
     font-family: Lato;
@@ -55,9 +65,12 @@
     padding:6px 10px;
     text-transform: uppercase;
     margin-bottom: 2px;
+    transition: padding 0.2s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+    border-right: 0px;
     &:hover {
         color:@white;
         text-decoration: none;
+        padding-right: 18px;
     }
 }
 .post-content {
@@ -70,7 +83,7 @@ a {
     color:@brand;
     &:hover {
         color:@brand;
-        text-decoration: none;
+        text-decoration: underline;
     }
 }
 
@@ -95,6 +108,7 @@ a {
     background:#000;
     color: @white;
     padding:18px 0px;
+    border-radius:0px;
     .logo {
         color: @white;
         font-family: Lato;
@@ -158,6 +172,9 @@ a {
             font-size: 30px;
             line-height: 30px;
             padding:0px 5px;
+            &:hover {
+                color:@brand;
+            }
         }
     }
 }
@@ -292,6 +309,11 @@ a {
             position: absolute;
             right: 20px;
             top: 20px;
+            .share-buttons {
+                width: 150px;
+                right: auto;
+                left: -150px;
+            }
         }
     }
 }
@@ -389,16 +411,21 @@ a {
     border: solid 5px #000000;
     padding:20px;
     font-family: Lato;
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 900;
     color: #000;
     text-transform: uppercase;
     span {
         display: inline-block;
-        margin-right: 10px;
+        margin-right: 20px;
     }
     a {
         color:#000;
+        display: inline-block;
+        margin:0px 2px;
+        &:hover {
+            color: @brand;
+        }
     }
 }
 .press-posts {

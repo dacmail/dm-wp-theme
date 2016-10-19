@@ -6,7 +6,6 @@
 	include get_template_directory() . '/inc/posts.php';
 	include get_template_directory() . '/inc/widgets.php';
 	include get_template_directory() . '/inc/helpers.php';
-
 	// Modo mantenimiento para no logueados
 	// add_action('get_header','ungrynerd_maintenace');
 	function ungrynerd_maintenace() {
