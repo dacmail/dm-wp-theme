@@ -36,6 +36,19 @@
 		}
 	}
 
+	function the_first_cat() {
+		global $post;
+		$postcats = get_the_category($post->ID);
+		if ($postcats) { ?>
+			<div class="post-cat-wrapper">
+				<div class="post-cat">
+			  		<?php echo $postcats[0]->name ?>
+		  		</div>
+	  		</div>
+		<?php
+		}
+	}
+
 	function the_blog_title($site_id) {
 		global $post;
 		if ($site_id!=get_current_blog_id()) {
@@ -60,7 +73,7 @@
 			'type' => 'array',
 			'total' => $query->max_num_pages,
 			'format' => '?paged=%#%',
-			'mid_size' => 4,
+			'mid_size' => 7,
 			'current' => max( 1, get_query_var('paged') ),
 			'prev_text' => __('<i class="fa fa-chevron-left"></i>'),
 			'next_text' => __('<i class="fa fa-chevron-right"></i>'),

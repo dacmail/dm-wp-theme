@@ -150,3 +150,12 @@
 	    return $title;
 	});
 
+	//Custom image sizes in Media popups
+	add_filter( 'image_size_names_choose', 'ungrynerd_custom_image_sizes' );
+	function ungrynerd_custom_image_sizes( $sizes ){
+		$custom_sizes = array(
+			'un_gallery' =>	'Miniatura de galería'
+		);
+		return array_merge( $sizes, $custom_sizes );
+	}
+
