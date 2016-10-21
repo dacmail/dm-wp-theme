@@ -42,7 +42,7 @@
 			</div>
 		</nav>
 		<div class="tag-cloud">
-			<span class="title">Destacados</span>
+			<span class="title"><i class="icon-ico_tendencias"></i> Destacados</span>
 			<div class="tag-carousel owl-carousel">
 				<?php wp_tag_cloud() ?>
 			</div>

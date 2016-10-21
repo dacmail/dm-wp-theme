@@ -10,7 +10,7 @@
 		add_theme_support('title-tag');
 
 		//posts formats support
-		add_theme_support( 'post-formats', array( 'video', 'gallery' ) );
+		add_theme_support( 'post-formats', array('gallery'));
 
 		// Soporte para miniaturas y definición de tamaños
 		add_theme_support('post-thumbnails');
@@ -21,6 +21,7 @@
 			add_image_size('un_small', 270, 175, false);
 			add_image_size('un_square', 330, 330, true);
 			add_image_size('un_gallery', 750, 400, true);
+			add_image_size('un_gallery_big', 1200, 700, false);
 		}
 
 		// Definición menús

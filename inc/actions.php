@@ -49,6 +49,12 @@
 					'2.1.6',
 					true);
 				wp_enqueue_script(
+					'photoswipe',
+					get_template_directory_uri() . '/assets/scripts/lightgallery.min.js',
+					array('jquery'),
+					'4.1.1',
+					true);
+				wp_enqueue_script(
 					'ungrynerd-main',
 					get_template_directory_uri() . '/assets/scripts/main.js',
 					array('jquery'),
@@ -154,8 +160,20 @@
 	add_filter( 'image_size_names_choose', 'ungrynerd_custom_image_sizes' );
 	function ungrynerd_custom_image_sizes( $sizes ){
 		$custom_sizes = array(
-			'un_gallery' =>	'Miniatura de galería'
+			'un_gallery' =>	'Miniatura de galería',
+			'un_gallery_big' =>	'Foto de galería principal'
 		);
 		return array_merge( $sizes, $custom_sizes );
 	}
+
+	function ungrynerd_get_attachment_link_filter( $content, $post_id, $size, $permalink ) {
+    // Only do this if we're getting the file URL
+        if (! $permalink) {
+            // This returns an array of (url, width, height)
+            $image = wp_get_attachment_image_src( $post_id, 'un_huge' );
+            $new_content = preg_replace('/href=\'(.*?)\'/', 'href=\'' . $image[0] . '\'', $content );
+            return $new_content;
+        }
+    }
+    add_filter('wp_get_attachment_link', 'ungrynerd_get_attachment_link_filter', 10, 4);
 
