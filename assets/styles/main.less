@@ -6,6 +6,13 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'lg';
+    src: url("../fonts/lg.eot?n1z373");
+    src: url("../fonts/lg.eot?#iefixn1z373") format("embedded-opentype"), url("../fonts/lg.woff?n1z373") format("woff"), url("../fonts/lg.ttf?n1z373") format("truetype"), url("../fonts/lg.svg?n1z373#lg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: 'diariomadrid';
     src:  url('../fonts/diariomadrid.eot?cuxkqy');
     src:  url('../fonts/diariomadrid.eot?cuxkqy#iefix') format('embedded-opentype'),
@@ -15,16 +22,10 @@
     font-weight: normal;
     font-style: normal;
 }
-@font-face {
-    font-family: 'lg';
-    src: url("../fonts/lg.eot?n1z373");
-    src: url("../fonts/lg.eot?#iefixn1z373") format("embedded-opentype"), url("../fonts/lg.woff?n1z373") format("woff"), url("../fonts/lg.ttf?n1z373") format("truetype"), url("../fonts/lg.svg?n1z373#lg") format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
 
 @import (inline) "bootstrap.css";
 @import (inline) "font-awesome.css";
+@import (inline) "fonts.css";
 @import (inline) "lightgallery.min.css";
 @import (inline) "lg-transitions.min.css";
 @import (inline) "owl.carousel.min.css";
@@ -640,10 +641,19 @@ a {
                 }
             }
             &.gallery-columns-1 {
+                padding-top:0px;
+                &:before {
+                    display: none;
+                }
                 .gallery-item {
                     margin-bottom: 40px;
                     position: relative;
                     text-align: center;
+                    &:first-of-type {
+                        &:before {
+                            display: none;
+                        }
+                    }
                     .gallery-caption {
                         position: absolute;
                         background-color: rgba(0, 0, 0, 0.8);
@@ -658,6 +668,14 @@ a {
                     img {
                         max-width: 100%;
                         width: auto;
+                    }
+                    .gallery-icon {
+                        overflow: hidden;
+                        &:hover {
+                            img {
+                                 transform:scale(1);
+                            }
+                        }
                     }
                 }
             }
