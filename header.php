@@ -43,8 +43,12 @@
 		</nav>
 		<div class="tag-cloud">
 			<span class="title"><i class="icon-ico_tendencias"></i> Destacados</span>
-			<div class="tag-carousel owl-carousel">
-				<?php wp_tag_cloud() ?>
-			</div>
+			<?php wp_nav_menu(array(
+						'container' => 'div',
+						'items_wrap' => '%3$s',
+						'container_class' => 'tag-carousel owl-carousel',
+						'theme_location' => 'tags',
+						'walker' => new ungrynerd_walker_nav_menu));
+			?>
 		</div>
 	</div>
