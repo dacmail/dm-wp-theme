@@ -2,7 +2,7 @@
     <?php while (have_posts()) : the_post(); ?>
         <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
             <div class="row">
-                <div class="col-sm-8 col-sm-offset-2">
+                <div class="col-md-8 col-md-offset-2">
                     <?php the_first_cat(); ?>
                     <h1 class="post-title">
                         <?php the_title(); ?>

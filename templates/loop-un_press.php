@@ -1,4 +1,4 @@
-<div class="col-sm-8 col-sm-offset-2">
+<div class="col-md-8 col-md-offset-2">
     <?php while (have_posts()) : the_post(); ?>
         <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
             <img class="madrid-logo" src="<?php ungrynerd_path('/images/ayto_madrid.jpg') ?>"></img>

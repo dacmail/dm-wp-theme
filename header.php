@@ -24,17 +24,17 @@
 	<div class="container">
 		<nav id="menus" class="menus collapse">
 			<div class="row">
-				<div class="col-sm-4">
+				<div class="col-md-4 col-sm-3">
 					<?php wp_nav_menu(array('menu_class' => 'nav navbar-nav',
 									'theme_location' => 'main-column-1',
 									'fallback_cb' => false)); ?>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-md-4 col-sm-3">
 					<?php wp_nav_menu(array('menu_class' => 'nav navbar-nav',
 									'theme_location' => 'main-column-2',
 									'fallback_cb' => false)); ?>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-md-4 col-sm-6">
 					<?php wp_nav_menu(array('menu_class' => 'nav navbar-nav',
 									'theme_location' => 'main-column-3',
 									'fallback_cb' => false)); ?>

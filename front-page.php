@@ -4,10 +4,10 @@
 		<div class="col-sm-8">
 			<?php dynamic_sidebar("main-featured"); ?>
 			<div class="row">
-				<div class="col-sm-8">
+				<div class="col-md-8 col-sm-7">
 					<?php dynamic_sidebar("column-1"); ?>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-md-4 col-sm-5">
 					<?php dynamic_sidebar("column-2"); ?>
 				</div>
 			</div> <!-- /.row -->
