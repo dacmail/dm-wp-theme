@@ -28,9 +28,9 @@
 		$posttags = get_the_tags($post->ID);
 		if ($posttags) { ?>
 			<div class="post-tag-wrapper">
-				<div class="post-tag">
+				<a href="<?php echo get_term_link($posttags[0]) ?>" class="post-tag">
 			  		<?php echo $posttags[0]->name ?>
-		  		</div>
+		  		</a>
 	  		</div>
 		<?php
 		}
@@ -41,9 +41,9 @@
 		$postcats = get_the_category($post->ID);
 		if ($postcats) { ?>
 			<div class="post-cat-wrapper">
-				<div class="post-cat">
+				<a href="<?php echo get_term_link($postcats[0]) ?>" class="post-cat">
 			  		<?php echo $postcats[0]->name ?>
-		  		</div>
+		  		</a>
 	  		</div>
 		<?php
 		}
