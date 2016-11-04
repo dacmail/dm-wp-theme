@@ -10,7 +10,7 @@
             <?php the_blog_title($current_blog); ?>
             <?php the_first_tag(); ?>
             <h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-            <div class="post-author"><strong><?php the_time(get_option('date_format')); ?></strong> por José Manuel Calvo, concejal delegado del Área de Desarrollo Urbano Sostenible</div>
+            <div class="post-author"><strong><?php the_time(get_option('date_format')); ?></strong></div>
             <?php get_template_part('templates/post-share') ?>
         </header>
     </article>

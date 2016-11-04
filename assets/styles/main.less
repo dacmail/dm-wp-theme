@@ -130,19 +130,20 @@ a {
     }
 }
 .header {
-    background:#000;
-    color: @white;
+    background:#fff;
+    color: #000;
     padding:18px 0px;
     border-radius:0px;
+    text-align: center;
+    border-bottom:2px solid #000;
     .logo {
-        color: @white;
-
-        font-size: 20px;
-        font-weight: 900;
-        line-height:24px;
-        text-transform: uppercase;
+        img {
+            max-width: 300px;
+            height: auto;
+        }
     }
     .menu-toggle {
+        margin-top: 40px;
         display: block;
         float: right;
         border:0px;
@@ -312,7 +313,6 @@ a {
     margin-bottom: 40px;
     .home & {
         padding-right: 0px;
-        margin-bottom: 0px;
     }
 }
 .single {
@@ -524,7 +524,7 @@ a {
     }
 }
 
-.single {
+.single, .page {
     .post-content {
         font-size: 18px;
         line-height: 1.7;
@@ -541,13 +541,17 @@ a {
             margin-bottom: 20px;
         }
         blockquote {
-            font-size: 25px;
+            font-size: 20px;
             font-weight: 900;
             line-height: 1.2;
             color: #000000;
             border: solid 10px #000000;
-            padding:30px 65px;
+            padding:20px 45px;
             position: relative;
+            float: left;
+            max-width: 60%;
+            margin-right: 20px;
+            margin-bottom: 8px;
             &:before {
                 content: "\e900";
                 font-family: 'diariomadrid' !important;
@@ -959,7 +963,6 @@ a {
     color:@white;
     margin-bottom: 40px;
     .title {
-
         font-size: 30px;
         font-weight: 900;
         color: @white;
@@ -970,7 +973,6 @@ a {
         padding:5px 0px 5px 60px;
     }
     .date {
-
         font-size: 16px;
         font-weight: 900;
         line-height: 1.2;
@@ -979,7 +981,7 @@ a {
         margin-top:30px;
     }
     .post-title {
-
+        font-family: "Lato";
         font-size: 16px;
         font-weight: bold;
         line-height: 1.2;

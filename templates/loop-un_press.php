@@ -1,7 +1,7 @@
 <div class="col-md-8 col-md-offset-2">
     <?php while (have_posts()) : the_post(); ?>
         <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-            <img class="madrid-logo" src="<?php ungrynerd_path('/images/ayto_madrid.jpg') ?>"></img>
+            <img class="madrid-logo" alt="Ayuntamiento de Madrid" src="<?php ungrynerd_path('/images/ayto_madrid.jpg') ?>">
             <div class="post-cat-wrapper">
                 <a class="post-cat" href="#">Nota de prensa</a>
             </div>

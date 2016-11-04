@@ -12,15 +12,17 @@
 			<img class="logo-madrid" src="<?php ungrynerd_path('/images/logo_madrid.png') ?>" alt="Ayuntamiento de Madrid">
 		</div>
 	</aside>
-	<header class="navbar header" id="header">
-		<div class="container">
-			<a href="<?php echo esc_url(home_url('/')); ?>" class="logo">Diario de Madrid</a>
+
+	<div class="container">
+		<header class="navbar header" id="header">
+			<a href="<?php echo esc_url(home_url('/')); ?>" class="logo"><img  src="<?php ungrynerd_path('/images/logo.png') ?>" alt="Diario de Madrid"></a>
 			<button class="menu-toggle" type="button" data-toggle="collapse" data-target="#menus">
 				<span class="sr-only"><?php _e('Menu', 'ungrynerd'); ?></span>
 				<i class="fa fa-bars"></i>
 			</button>
-		</div>
-	</header>
+		</header>
+	</div>
+
 	<div class="container">
 		<nav id="menus" class="menus collapse">
 			<div class="row">
