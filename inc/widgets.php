@@ -36,7 +36,7 @@ class widget_post_block extends WP_Widget {
         ?>
             <input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="hidden" value="<?php echo esc_attr( $title ); ?>" />
         <p>
-            <label for="<?php echo $this->get_field_id('site_id'); ?>"><?php _e('Tipo', 'ungrynerd'); ?></label>
+            <label for="<?php echo $this->get_field_id('site_id'); ?>"><?php _e('Sitio', 'ungrynerd'); ?></label>
             <select id="<?php echo $this->get_field_id('site_id'); ?>" class="widefat" name="<?php echo $this->get_field_name('site_id'); ?>">
                 <?php foreach ($sites as $site): ?>
                     <option value="<?php echo $site->blog_id ?>" <?php echo $site_id==$site->blog_id ? 'selected' : ''; ?>><?php echo $site->domain . $site->path ?></option>

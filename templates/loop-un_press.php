@@ -3,7 +3,7 @@
         <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
             <img class="madrid-logo" alt="Ayuntamiento de Madrid" src="<?php ungrynerd_path('/images/ayto_madrid.jpg') ?>">
             <div class="post-cat-wrapper">
-                <a class="post-cat" href="#">Nota de prensa</a>
+                <a class="post-cat" href="<?php echo get_post_type_archive_link('un_press'); ?>">Nota de prensa</a>
             </div>
             <h1 class="post-title">
                 <?php the_title(); ?>

@@ -27,7 +27,7 @@ function ugnrynerd_press_post_type()  {
     'hierarchical' => false,
     'exclude_from_search' => true,
     'menu_position' => 5,
-    'rewrite' => array( 'slug' => 'nota-de-prensa' ),
+    'rewrite' => array( 'slug' => 'notas-de-prensa' ),
     'taxonomies' => array(),
     'has_archive' => true,
     'supports' => array('title', 'editor', 'excerpt', 'author')
