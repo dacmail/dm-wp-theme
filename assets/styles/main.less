@@ -103,7 +103,7 @@ body {
 .post-content {
     font-size: 16px;
     line-height: 1.2;
-    color: @text;
+    color: @dark;
 }
 a {
     color:@brand;
@@ -347,12 +347,17 @@ a {
         }
     }
     .post-intro {
-        h2 {
+        ul {
+            margin: 0px;
+            padding: 0px;
+        }
+        h2, li {
             font-size: 20px;
             font-weight: 300;
             line-height: 1.5;
             position: relative;
             margin-bottom: 45px;
+            list-style:none;
             &:after {
                 width: 30px;
                 height: 2px;
@@ -390,6 +395,7 @@ a {
         border-bottom: 2px solid #000000;
         padding: 0px 10px 20px 10px;
         margin-bottom: 40px;
+        font-weight: bold;
     }
     .post-links {
         text-align: center;
@@ -533,7 +539,7 @@ a {
     .post-content {
         font-size: 18px;
         line-height: 1.7;
-        color: @text;
+        color: @dark;
         margin-bottom: 30px;
         h2 {
             font-size: 25px;
@@ -557,6 +563,7 @@ a {
             max-width: 60%;
             margin-right: 20px;
             margin-bottom: 8px;
+            margin-top: 8px;
             &:before {
                 content: "\e900";
                 font-family: 'diariomadrid' !important;
@@ -660,6 +667,9 @@ a {
                         width: 66%;
                     }
                 }
+                .wp-caption-text {
+                    display: none;
+                }
             }
             &.gallery-columns-1 {
                 padding-top:0px;
@@ -753,11 +763,13 @@ a {
     .post-content,
     .report-error a,
     .menus .nav > .menu-item > a,
-    .menus .nav > .menu-item .sub-menu .menu-item a
+    .menus .nav > .menu-item .sub-menu .menu-item a,
+    .header
     {
         color:@white;
     }
-    .post-share .share-buttons {
+    .post-share .share-buttons,
+    .header {
         background: #000000;
     }
     .report-error a,

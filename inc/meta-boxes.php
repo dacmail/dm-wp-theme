@@ -23,6 +23,7 @@ $meta_boxes[] = array(
                     'name' =>  __('Autor/a', 'ungrynerd'),
                     'id' => $prefix . 'author',
                     'type' => 'text',
+                    'std' => 'Redacción Cibeles'
                 ),
             array(
                     'name' =>  __('Enlaces', 'ungrynerd'),
