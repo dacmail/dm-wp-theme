@@ -10375,6 +10375,9 @@ a:hover {
   line-height: 30px;
   text-align: center;
 }
+.post-share .share-buttons a.icon.wa {
+  display: none;
+}
 .post-share .share-buttons a:hover {
   color: #003df6;
   text-decoration: none;
@@ -10465,6 +10468,7 @@ a:hover {
   top: 0px;
   left: 0px;
   right: 0px;
+  text-align: right;
 }
 .single .post-author {
   font-size: 16px;
@@ -10935,8 +10939,10 @@ a:hover {
 }
 .main-featured .post-wrap .post-share .share-buttons {
   width: 150px;
+  padding-right: 15px;
   right: auto;
   left: -150px;
+  text-align: right;
 }
 /*
     HOMEPAGE: GENERIC POST COLUMN
@@ -11339,6 +11345,9 @@ a:hover {
     margin: 2px 0px 0px 0px;
     top: 0px;
     left: 0px;
+  }
+  .post-share .share-buttons a.icon.wa {
+    display: inline-block;
   }
   .single .post-title,
   .page .post-title {
