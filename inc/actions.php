@@ -1,6 +1,6 @@
 <?php
 	//Change for activate development mode (using JS and CSS in assets folder)
-	define('WP_DEVELOPMENT_MODE', false);
+	define('WP_DEVELOPMENT_MODE', true);
 
 
 	//Enqueue scripts and styles
