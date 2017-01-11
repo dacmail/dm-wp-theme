@@ -11324,9 +11324,17 @@ a:hover {
   .pre-header .logo-madrid {
     display: none;
   }
-  .tag-cloud .title {
-    margin-right: 10px;
-    padding-left: 30px;
+  .header {
+    text-align: left;
+  }
+  .header .menu-toggle {
+    margin-top: 25px;
+  }
+  .header .logo img {
+    max-width: 225px;
+  }
+  .tag-cloud {
+    display: none;
   }
   .footer .navbar-nav {
     margin: 10px 0px;
@@ -11345,6 +11353,11 @@ a:hover {
     margin: 2px 0px 0px 0px;
     top: 0px;
     left: 0px;
+  }
+  .main-featured .post-wrap .post-share {
+    position: relative;
+    top: auto;
+    right: auto;
   }
   .post-share .share-buttons a.icon.wa {
     display: inline-block;
