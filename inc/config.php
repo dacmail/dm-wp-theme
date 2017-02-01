@@ -94,7 +94,15 @@
 		    'after_widget' => '</div>',
 		    'before_title' => '<h2 class="title">',
 		 	'after_title' => '</h2>',
-		 	'name' => esc_html__('Barra Lateral Home', 'ungrynerd')
+		 	'name' => esc_html__('Sidebar Home (Inferior)', 'ungrynerd')
+		));
+		register_sidebar(array(
+			'id' => 'sidebar-home-top',
+		    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		    'after_widget' => '</div>',
+		    'before_title' => '<h2 class="title">',
+		 	'after_title' => '</h2>',
+		 	'name' => esc_html__('Sidebar Home (Superior)', 'ungrynerd')
 		));
 		register_sidebar(array(
 			'id' => 'sidebar-1',
@@ -102,7 +110,15 @@
 		    'after_widget' => '</div>',
 		    'before_title' => '<h2 class="title">',
 		 	'after_title' => '</h2>',
-		 	'name' => esc_html__('Barra Lateral', 'ungrynerd')
+		 	'name' => esc_html__('Sidebar general (Superior)', 'ungrynerd')
+		));
+		register_sidebar(array(
+			'id' => 'sidebar-2',
+		    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		    'after_widget' => '</div>',
+		    'before_title' => '<h2 class="title">',
+		 	'after_title' => '</h2>',
+		 	'name' => esc_html__('Sidebar general (Inferior)', 'ungrynerd')
 		));
 	}
 	add_action('widgets_init', 'ungrynerd_widgets_init');

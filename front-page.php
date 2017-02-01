@@ -13,6 +13,7 @@
 			</div> <!-- /.row -->
 		</div>
 		<div class="col-sm-4">
+			<?php dynamic_sidebar("sidebar-home-top"); ?>
 			<?php get_search_form() ?>
 			<?php get_template_part('templates/follow-us') ?>
 			<?php dynamic_sidebar("column-3"); ?>
