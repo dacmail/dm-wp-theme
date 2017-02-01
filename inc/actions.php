@@ -177,3 +177,4 @@
     }
     add_filter('wp_get_attachment_link', 'ungrynerd_get_attachment_link_filter', 10, 4);
 
+   	add_option('grupos_municipales', '', true);
