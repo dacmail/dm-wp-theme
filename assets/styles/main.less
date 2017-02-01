@@ -189,7 +189,7 @@ a {
                 font-size: 16px !important;
                 color: @dark;
                 display: block;
-                line-height: 12px;
+                line-height: 1;
             }
         }
     }
@@ -283,6 +283,9 @@ a {
     padding-right: 10px;
     a {
        color:#000;
+       &:hover {
+            text-decoration: none;
+       }
     }
     .share-buttons {
         position: absolute;
@@ -1220,5 +1223,52 @@ a {
             color:@white;
         }
     }
+}
+
+/* NEWSLETTER FORM */
+div.wpcf7 {
+    text-align: center;
+}
+.wysija-submit, #wysija-subscriptions .button-primary, input[type=submit] {
+    background: @dark;
+    color: @white;
+    border: 0px;
+    padding: 10px;
+}
+.wysija-input, #wysija-subscriptions input[type=text], .wpcf7-text, .wpcf7-textarea {
+    width: 100%;
+    background: #f1f1f1;
+    border: 0px;
+    line-height: 50px;
+    height: 50px;
+    padding: 0px 14px;
+    color: #333;
+    font-size: 17px;
+    box-shadow: none;
+    border-radius: 0px;
+}
+.wpcf7-textarea {
+    height: auto;
+    line-height: 1.3;
+}
+.widget_wysija_cont p label {
+    font-weight: 100;
+}
+.formError {
+    position: relative !important;
+    top: 0px !important;
+    left: 0px !important;
+    .formErrorContent {
+        width: 100%;
+        border: 0px;
+        margin-bottom: 10px;
+    }
+}
+#wysija-subscriptions tr {
+    border-bottom: 10px solid #fff;
+}
+#wysija-subscriptions label {
+    margin-right: 20px;
+    font-weight: 100;
 }
 @import "mediaqueries.less";

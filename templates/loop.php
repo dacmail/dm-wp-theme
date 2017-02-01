@@ -40,7 +40,7 @@
             <?php endif ?>
             <?php the_tags('<div class="post-tags"><h3>Archivado en</h3>', '', '</div>'); ?>
             <div class="report-error">
-                <a href="http://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad?vgnextchannel=1578e3d5d3e07010VgnVCM100000dc0ca8c0RCRD&vgnextoid=ae50a76d7388f410VgnVCM1000000b205a0aRCRD" target="_blank"><i class="icon-ico_reportar"></i> Comunicar error en la información</a>
+                <a href="<?php echo add_query_arg(array('articulo' => get_the_title()), get_permalink(7294)); ?>" target="_blank"><i class="icon-ico_reportar"></i> Comunicar error en la información</a>
             </div>
             <div class="text-center">
                 <div class="share-on">
