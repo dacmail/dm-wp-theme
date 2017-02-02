@@ -15,7 +15,7 @@
 
 	<div class="container">
 		<header class="navbar header" id="header">
-			<?php if (get_post_format()=='gallery'): ?>
+			<?php if (get_post_format()=='gallery' && is_single()): ?>
 				<a href="<?php echo esc_url(home_url('/')); ?>" class="logo"><img  src="<?php ungrynerd_path('/images/logo-dark.png') ?>" alt="Diario de Madrid"></a>
 			<?php else: ?>
 				<a href="<?php echo esc_url(home_url('/')); ?>" class="logo"><img  src="<?php ungrynerd_path('/images/logo.png') ?>" alt="Diario de Madrid"></a>
