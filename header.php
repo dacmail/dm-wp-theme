@@ -15,7 +15,11 @@
 
 	<div class="container">
 		<header class="navbar header" id="header">
-			<a href="<?php echo esc_url(home_url('/')); ?>" class="logo"><img  src="<?php ungrynerd_path('/images/logo.png') ?>" alt="Diario de Madrid"></a>
+			<?php if (get_post_format()=='gallery'): ?>
+				<a href="<?php echo esc_url(home_url('/')); ?>" class="logo"><img  src="<?php ungrynerd_path('/images/logo-dark.png') ?>" alt="Diario de Madrid"></a>
+			<?php else: ?>
+				<a href="<?php echo esc_url(home_url('/')); ?>" class="logo"><img  src="<?php ungrynerd_path('/images/logo.png') ?>" alt="Diario de Madrid"></a>
+			<?php endif ?>
 			<button class="menu-toggle" type="button" data-toggle="collapse" data-target="#menus">
 				<span class="sr-only"><?php _e('Menu', 'ungrynerd'); ?></span>
 				<i class="fa fa-bars"></i>
