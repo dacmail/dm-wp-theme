@@ -32,6 +32,7 @@
 				  'main-column-2' => esc_html__('Menu principal (Columna 2)', 'ungrynerd'),
 				  'main-column-3' => esc_html__('Menu principal (Columna 3)', 'ungrynerd'),
 				  'tags' => esc_html__('Menu destacados', 'ungrynerd'),
+				  'footer' => esc_html__('Enlaces pie', 'ungrynerd'),
 				)
 			);
 		}
