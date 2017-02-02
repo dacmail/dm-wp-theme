@@ -31,7 +31,7 @@
                     <?php $links = get_post_meta(get_the_ID(), '_ungrynerd_links', true); ?>
                     <?php if (!empty($links)) : ?>
                         <div class="post-links">
-                            <h3>Enlaces de interes</h3>
+                            <h3>Enlaces de interés</h3>
                             <ul>
                             <?php foreach ($links as $link) : ?>
                                 <li><a href="<?php echo esc_url($link[1]) ?>"><?php echo $link[0] ?></a></li>

@@ -63,6 +63,13 @@
 		}
 	}
 
+    function the_gallery_icon() {
+        global $post;
+        if (get_post_format($post->ID)=='gallery') {
+            echo '<i class="icon-ico_camara"></i> · ';
+        }
+    }
+
 	function ungrynerd_pagination($query=null) {
 		global $wp_query;
 		$query = $query ? $query : $wp_query;
