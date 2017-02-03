@@ -5,7 +5,9 @@
 ?>
 <?php if ( $post_block->have_posts() ) : while ( $post_block->have_posts() ) : $post_block->the_post(); ?>
     <article <?php post_class('column-2 post-home post-column') ?>>
-        <?php the_post_thumbnail('un_small'); ?>
+        <?php if (has_post_thumbnail()): ?>
+            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('un_small'); ?></a>
+        <?php endif ?>
         <?php the_blog_title($current_blog); ?>
         <?php the_first_tag(); ?>
         <h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>

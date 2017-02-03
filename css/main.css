@@ -11108,41 +11108,41 @@ a:hover {
 /*
     ARCHIVES
 */
-.archive .hentry,
-.search .hentry {
+.archive article.hentry,
+.search article.hentry {
   border-bottom: 2px solid #000000;
   margin-bottom: 40px;
   padding-bottom: 40px;
 }
-.archive .hentry .wp-post-image,
-.search .hentry .wp-post-image {
+.archive article.hentry .wp-post-image,
+.search article.hentry .wp-post-image {
   width: 165px;
   height: 165px;
   object-fit: cover;
   float: left;
 }
-.archive .hentry .post-wrapper,
-.search .hentry .post-wrapper {
+.archive article.hentry .post-wrapper,
+.search article.hentry .post-wrapper {
   position: relative;
 }
-.archive .hentry .post-wrapper .post-title,
-.search .hentry .post-wrapper .post-title {
+.archive article.hentry .post-wrapper .post-title,
+.search article.hentry .post-wrapper .post-title {
   clear: none;
 }
-.archive .hentry .post-wrapper .post-share,
-.search .hentry .post-wrapper .post-share {
+.archive article.hentry .post-wrapper .post-share,
+.search article.hentry .post-wrapper .post-share {
   position: absolute;
   top: 0px;
   right: 0px;
 }
-.archive .hentry .post-wrapper .post-share .share-buttons,
-.search .hentry .post-wrapper .post-share .share-buttons {
+.archive article.hentry .post-wrapper .post-share .share-buttons,
+.search article.hentry .post-wrapper .post-share .share-buttons {
   width: 150px;
   right: auto;
   left: -150px;
 }
-.archive .hentry.has-post-thumbnail .post-wrapper,
-.search .hentry.has-post-thumbnail .post-wrapper {
+.archive article.hentry.has-post-thumbnail .post-wrapper,
+.search article.hentry.has-post-thumbnail .post-wrapper {
   margin-left: 200px;
 }
 .archive .term-title,
@@ -11244,6 +11244,7 @@ a:hover {
   padding-left: 84px;
   min-height: 64px;
   margin-bottom: 20px;
+  border: 0px;
 }
 .widget.grupos-municipales .post a {
   color: #000;

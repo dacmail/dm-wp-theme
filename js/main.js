@@ -3,6 +3,9 @@
         $(".gallery").lightGallery({
             selector: '.gallery-icon a'
         });
+        $('.share-over').on('click', function(event) {
+            event.preventDefault();
+        });
 	});
 	$(window).load(function() {
 		$('.tag-carousel').owlCarousel({
