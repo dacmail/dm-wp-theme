@@ -11301,9 +11301,13 @@ a:hover {
 .wpcf7-form-control-wrap {
   display: block;
   max-width: 500px;
+  margin: 0px auto;
 }
 div.wpcf7 {
   text-align: center;
+}
+div.wpcf7 label {
+  display: block;
 }
 .wysija-submit,
 #wysija-subscriptions .button-primary,
