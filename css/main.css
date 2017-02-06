@@ -11298,6 +11298,10 @@ a:hover {
   color: #fff;
 }
 /* NEWSLETTER FORM */
+.wpcf7-form-control-wrap {
+  display: block;
+  max-width: 500px;
+}
 div.wpcf7 {
   text-align: center;
 }

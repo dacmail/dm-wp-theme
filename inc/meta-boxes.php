@@ -41,6 +41,13 @@ $meta_boxes[] = array(
                     'id' => $prefix . 'hide_thumb',
                     'type' => 'checkbox',
                 ),
+            array(
+                    'name' =>  __('Este post contiene una galería', 'ungrynerd'),
+                    'id' => $prefix . 'has_gallery',
+                    'type' => 'checkbox',
+                    'desc' =>  __('Se mostrará un icono descriptivo en portada', 'ungrynerd'),
+
+                ),
         ),
     );
 

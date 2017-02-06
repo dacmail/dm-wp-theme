@@ -65,7 +65,7 @@
 
     function the_gallery_icon() {
         global $post;
-        if (get_post_format($post->ID)=='gallery') {
+        if (get_post_format($post->ID)=='gallery' || get_post_meta($post->ID, '_ungrynerd_has_gallery', true)) {
             echo '<i class="icon-ico_camara"></i> · ';
         }
     }
