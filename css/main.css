@@ -11284,7 +11284,7 @@ a:hover {
 }
 .widget.grupos-municipales .more a:hover {
   text-decoration: none;
-  border: 0px;
+  border-color: transparent;
 }
 /*
     FOOTER
