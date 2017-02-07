@@ -11137,9 +11137,9 @@ a:hover {
 }
 .archive article.hentry .post-wrapper .post-share .share-buttons,
 .search article.hentry .post-wrapper .post-share .share-buttons {
-  width: 150px;
+  width: 110px;
   right: auto;
-  left: -150px;
+  left: -110px;
 }
 .archive article.hentry.has-post-thumbnail .post-wrapper,
 .search article.hentry.has-post-thumbnail .post-wrapper {
@@ -11170,6 +11170,10 @@ a:hover {
   width: 105px;
   top: -10px;
   left: 0px;
+}
+.archive.post-type-archive-un_press .post-wrapper,
+.search.post-type-archive-un_press .post-wrapper {
+  padding-top: 30px;
 }
 /*
     PAGINATION
@@ -11428,6 +11432,10 @@ input[type=submit] {
     top: auto;
     right: auto;
   }
+  .main-featured .post-wrap .post-share .share-buttons {
+    left: auto;
+    right: -150px;
+  }
   .post-share .share-buttons a.icon.wa {
     display: inline-block;
   }
@@ -11461,21 +11469,26 @@ input[type=submit] {
   .search .term-title {
     font-size: 20px;
   }
-  .archive .hentry .wp-post-image,
-  .search .hentry .wp-post-image {
+  .archive article.hentry .wp-post-image,
+  .search article.hentry .wp-post-image {
     display: none;
   }
-  .archive .hentry .post-wrapper,
-  .search .hentry .post-wrapper,
-  .archive .hentry.has-post-thumbnail .post-wrapper,
-  .search .hentry.has-post-thumbnail .post-wrapper {
+  .archive article.hentry .post-wrapper,
+  .search article.hentry .post-wrapper,
+  .archive article.hentry.has-post-thumbnail .post-wrapper,
+  .search article.hentry.has-post-thumbnail .post-wrapper {
     margin-left: 0px;
   }
-  .archive .hentry .post-wrapper .post-title,
-  .search .hentry .post-wrapper .post-title,
-  .archive .hentry.has-post-thumbnail .post-wrapper .post-title,
-  .search .hentry.has-post-thumbnail .post-wrapper .post-title {
+  .archive article.hentry .post-wrapper .post-title,
+  .search article.hentry .post-wrapper .post-title,
+  .archive article.hentry.has-post-thumbnail .post-wrapper .post-title,
+  .search article.hentry.has-post-thumbnail .post-wrapper .post-title {
     font-size: 20px;
+  }
+  .archive article.hentry .post-wrapper .post-share .share-buttons,
+  .search article.hentry .post-wrapper .post-share .share-buttons {
+    width: 150px;
+    left: -150px;
   }
   .pagination {
     max-width: 100%;

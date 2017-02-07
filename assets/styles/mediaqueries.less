@@ -94,6 +94,10 @@
                 position: relative;
                 top: auto;
                 right: auto;
+                .share-buttons {
+                    left: auto;
+                    right: -150px;
+                }
             }
         }
     }
@@ -144,7 +148,7 @@
         .term-title {
             font-size: 20px;
         }
-        .hentry {
+        article.hentry {
             .wp-post-image {
                 display: none;
             }
@@ -152,6 +156,14 @@
                 margin-left: 0px;
                 .post-title {
                     font-size: 20px;
+                }
+            }
+            .post-wrapper {
+                .post-share {
+                    .share-buttons {
+                        width: 150px;
+                        left: -150px;
+                    }
                 }
             }
         }
