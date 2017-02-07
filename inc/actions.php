@@ -144,7 +144,7 @@
 	    } elseif ( is_day() ) {
 	        $title = sprintf( __( 'Búsqueda por día %s' ), '<span class="term">' .get_the_date( _x( 'F j, Y', 'daily archives date format' ) ) . '</span>');
 	    } elseif ( is_post_type_archive() ) {
-	        $title = sprintf( __( 'Archivos %s' ), '<span class="term">' .post_type_archive_title( '', false ) . '</span>');
+	        $title = sprintf( __( 'Archivo %s' ), '<span class="term">' .post_type_archive_title( '', false ) . '</span>');
 	    } elseif ( is_tax() ) {
 	        $tax = get_taxonomy( get_queried_object()->taxonomy );
 	        $title = sprintf( __( '%1$s %2$s' ), $tax->labels->singular_name, '<span class="term">' . single_term_title( '', false ) . '</span>');

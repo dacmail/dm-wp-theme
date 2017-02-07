@@ -12,7 +12,11 @@
 				    	<div class="post-wrapper">
 					        <?php the_first_tag(); ?>
 					        <h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					        <div class="post-author"><strong><?php the_time(get_option('date_format')); ?></strong> por <?php get_template_part('templates/post-author') ?></div>
+					        <div class="post-author"><strong><?php the_time(get_option('date_format')); ?></strong>
+					        	<?php if (get_post_type()!='un_press'): ?>
+					        		por <?php get_template_part('templates/post-author') ?>
+					        	<?php endif ?>
+					        </div>
 					        <div class="post-content">
 					            <?php the_excerpt(); ?>
 					        </div>

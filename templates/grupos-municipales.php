@@ -11,6 +11,7 @@
             <?php while ( $blog_posts->have_posts() ) : $blog_posts->the_post(); ?>
                 <?php $blog_details = get_blog_details($site_id); ?>
                 <h3 <?php post_class('blog-' . $site_id); ?>><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                <p class="more"><a href="<?php echo $blog_details->siteurl ?>">Ver más</a></p>
             <?php endwhile; ?>
         <?php endif;
     endforeach;

@@ -11270,8 +11270,21 @@ a:hover {
   background-size: 64px;
 }
 .widget.grupos-municipales .more {
-  font-size: 11px;
-  text-align: right;
+  font-family: Lato;
+  font-size: 14px;
+  color: #000000;
+  font-weight: bold;
+  line-height: 20px;
+  padding-left: 84px;
+}
+.widget.grupos-municipales .more a {
+  color: #000000;
+  border-bottom: 2px solid #000000;
+  display: inline-block;
+}
+.widget.grupos-municipales .more a:hover {
+  text-decoration: none;
+  border: 0px;
 }
 /*
     FOOTER
