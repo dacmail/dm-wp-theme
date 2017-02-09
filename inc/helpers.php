@@ -25,11 +25,17 @@
 
 	function the_first_tag() {
 		global $post;
-		$posttags = get_the_tags($post->ID);
-		if ($posttags) { ?>
+        $featured = get_post_meta( $post->ID, '_ungrynerd_tag', true );
+        if (!empty($featured)) {
+            $tag = get_tag($featured);
+        } else {
+            $posttags = get_the_tags($post->ID);
+            $tag = $posttags[0];
+        }
+		if ($tag) { ?>
 			<div class="post-tag-wrapper">
-				<a href="<?php echo get_term_link($posttags[0]) ?>" class="post-tag">
-			  		<?php echo $posttags[0]->name ?>
+				<a href="<?php echo get_term_link($tag) ?>" class="post-tag">
+			  		<?php echo $tag->name ?>
 		  		</a>
 	  		</div>
 		<?php

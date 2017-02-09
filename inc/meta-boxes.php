@@ -48,6 +48,14 @@ $meta_boxes[] = array(
                     'desc' =>  __('Se mostrará un icono descriptivo en portada', 'ungrynerd'),
 
                 ),
+            array(
+                'name'       => esc_html__( 'Etiqueta destacada', 'ungrynerd' ),
+                'id'         => $prefix . 'tag',
+                'type'       => 'taxonomy_advanced',
+                'taxonomy'   => 'post_tag',
+                'field_type' => 'select',
+                'std' => '0'
+                )
         ),
     );
 
