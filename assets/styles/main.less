@@ -1237,20 +1237,23 @@ a {
         font-size: 14px;
         color: @white;
         text-decoration: underline;
-        margin-left: 8px;
         position: relative;
         display: inline-block;
         &:hover {
             text-decoration: none;
             color:@white;
         }
-        &:before {
-            content: ", ";
-            text-decoration: none;
-            position: absolute;
-            left: -9px;
-            bottom: -3px;
+        &.menu-item {
+            margin-left: 8px;
+            &:before {
+                content: ", ";
+                text-decoration: none;
+                position: absolute;
+                left: -9px;
+                bottom: -3px;
+            }
         }
+
     }
 }
 

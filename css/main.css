@@ -11306,7 +11306,6 @@ a:hover {
   font-size: 14px;
   color: #fff;
   text-decoration: underline;
-  margin-left: 8px;
   position: relative;
   display: inline-block;
 }
@@ -11314,7 +11313,10 @@ a:hover {
   text-decoration: none;
   color: #fff;
 }
-.copy a:before {
+.copy a.menu-item {
+  margin-left: 8px;
+}
+.copy a.menu-item:before {
   content: ", ";
   text-decoration: none;
   position: absolute;
