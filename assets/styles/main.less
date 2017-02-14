@@ -78,7 +78,6 @@ img {
     background-color: @brand;
     display: inline-block;
     padding:6px 10px;
-    text-transform: capitalize;
     transition: padding 0.2s cubic-bezier(0.075, 0.820, 0.165, 1.000);
     border-right: 0px;
     &:hover {
@@ -570,11 +569,9 @@ a {
             border: solid 10px #000000;
             padding:20px 45px;
             position: relative;
-            float: left;
-            max-width: 60%;
-            margin-right: 20px;
-            margin-bottom: 8px;
-            margin-top: 8px;
+            margin-right: 0px;
+            margin-bottom: 25px;
+            margin-top: 25px;
             &:before {
                 content: "\e900";
                 font-family: 'diariomadrid' !important;
@@ -1240,9 +1237,19 @@ a {
         font-size: 14px;
         color: @white;
         text-decoration: underline;
+        margin-left: 8px;
+        position: relative;
+        display: inline-block;
         &:hover {
             text-decoration: none;
             color:@white;
+        }
+        &:before {
+            content: ", ";
+            text-decoration: none;
+            position: absolute;
+            left: -9px;
+            bottom: -3px;
         }
     }
 }
