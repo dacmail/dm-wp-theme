@@ -18,7 +18,7 @@
 			<?php get_template_part('templates/follow-us') ?>
 			<?php dynamic_sidebar("column-3"); ?>
 			<?php get_template_part('templates/press') ?>
-			<?php get_template_part('templates/grupos-municipales') ?>
+			
 			<?php dynamic_sidebar("sidebar-home"); ?>
 		</div>
 	</div> <!-- /.row -->
