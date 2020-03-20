@@ -25,16 +25,21 @@
 
 	function the_first_tag() {
 		global $post;
-        $featured = get_post_meta( $post->ID, '_ungrynerd_tag', true );
-        if (!empty($featured)) {
-            $tag = get_tag($featured);
-        } else {
-            $posttags = get_the_tags($post->ID);
-            $tag = $posttags[0];
-        }
-		if ($tag) { ?>
+		$featured = get_post_meta( $post->ID, '_ungrynerd_tag', true );
+		if (!empty($featured)) {
+				$tag = get_tag($featured);
+		} else {
+				$posttags = get_the_tags($post->ID);
+				$tag = $posttags[0];
+		}
+		if ($tag) {
+			$term_link = get_term_link($tag);
+			if (get_current_blog_id() !== 1) {
+				$term_link = str_replace('/blog/', '/', $term_link);
+			}
+			?>
 			<div class="post-tag-wrapper">
-				<a href="<?php echo get_term_link($tag) ?>" class="post-tag">
+				<a href="<?php echo $term_link ?>" class="post-tag">
 			  		<?php echo $tag->name ?>
 		  		</a>
 	  		</div>
@@ -69,12 +74,12 @@
 		}
 	}
 
-    function the_gallery_icon() {
-        global $post;
-        if (get_post_format($post->ID)=='gallery' || get_post_meta($post->ID, '_ungrynerd_has_gallery', true)) {
-            echo '<i class="icon-ico_camara"></i> · ';
-        }
-    }
+  function the_gallery_icon() {
+		global $post;
+		if (get_post_format($post->ID)=='gallery' || get_post_meta($post->ID, '_ungrynerd_has_gallery', true)) {
+				echo '<i class="icon-ico_camara"></i> · ';
+		}
+	}
 
 	function ungrynerd_pagination($query=null) {
 		global $wp_query;
