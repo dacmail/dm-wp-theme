@@ -177,7 +177,7 @@
     }
     add_filter('wp_get_attachment_link', 'ungrynerd_get_attachment_link_filter', 10, 4);
 
-   	add_option('grupos_municipales', '', true);
+   	add_option('grupos_municipales', '', '', true);
 
 	function ungrynerd_opengraph( $output ) {
 			return $output . ' xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"';

@@ -28,9 +28,9 @@ function ugnrynerd_press_post_type()  {
     'exclude_from_search' => true,
     'menu_position' => 5,
     'rewrite' => array( 'slug' => 'notas-de-prensa' ),
-    'taxonomies' => array(),
+    'taxonomies' => array('category', 'post_tag'),
     'has_archive' => true,
     'supports' => array('title', 'editor', 'excerpt', 'author')
   );
-  register_post_type('un_press',$args);
+  register_post_type('un_press', $args);
 }
