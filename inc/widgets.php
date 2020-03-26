@@ -2,7 +2,7 @@
 class widget_post_block extends WP_Widget {
 
     function __construct() {
-        parent::__construct(false, $name = 'Bloque articulo', array('description' => 'Atículo para portada, muestra imagen destacada si la hay'));
+        parent::__construct(false, $name = 'Artículo destacado', array('description' => 'Atículo para portada, muestra imagen destacada si la hay'));
     }
 
     function widget($args, $instance) {
@@ -75,7 +75,7 @@ class widget_post_block extends WP_Widget {
 class widget_press_block extends WP_Widget {
 
     function __construct() {
-        parent::__construct('widget_press_block', 'Bloque Nota de prensa', array('description' => 'Nota de prensa destacada en portada'));
+        parent::__construct('widget_press_block', 'Nota de prensa destacada', array('description' => 'Nota de prensa destacada en portada'));
     }
 
     function widget($args, $instance) {
@@ -126,7 +126,58 @@ class widget_press_block extends WP_Widget {
     <?php
     }
 }
+class widget_cat_block extends WP_Widget {
+
+    function __construct() {
+        parent::__construct('widget_cat_block', 'Artículos de categoría', array('description' => 'Muestra los últimos artículos que pertenecen a una categría'));
+    }
+
+    function widget($args, $instance) {
+        extract( $args );
+        $title = apply_filters( 'widget_title', $instance['title'] );
+        $selected_cat  = $instance['selected_cat'];
+        $limit  = $instance['limit'];
+        ?>
+            <?php include(get_template_directory() . '/templates/featured-category.php'); ?>
+        <?php
+    }
+
+    function update($new_instance, $old_instance) {
+        $instance = $old_instance;
+        $instance['limit'] = strip_tags($new_instance['limit']);
+        $instance['selected_cat'] = strip_tags($new_instance['selected_cat']);
+        $instance['title'] = get_cat_name(strip_tags($new_instance['selected_cat']));
+        return $instance;
+    }
+
+    function form($instance) {
+        if ( isset( $instance[ 'title' ] ) ) {
+            $title = $instance[ 'title' ];
+        }
+        else {
+            $title = __( 'New title', 'ungrynerd' );
+        }
+        $selected_cat = isset($instance['selected_cat']) ? esc_attr($instance['selected_cat']) : 0;
+        $limit = isset($instance['limit']) ? esc_attr($instance['limit']) : -1;
+        ?>
+        <input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="hidden" value="<?php echo esc_attr( $title ); ?>" />
+        <?php
+            $cats = get_categories();
+        ?>
+        <p>
+            <label for="<?php echo $this->get_field_id('selected_cat'); ?>"><?php _e('Nota de prensa', 'ungrynerd'); ?></label>
+            <select id="<?php echo $this->get_field_id('selected_cat'); ?>" class="widefat" name="<?php echo $this->get_field_name('selected_cat'); ?>">
+            <?php foreach ($cats as $cat) :?>
+                <option value="<?php echo $cat->term_id ?>" <?php echo ($cat->term_id==$selected_cat) ? "selected" : ""; ?>><?php echo $cat->name; ?></option>
+            <?php endforeach; ?>
+            </select>
+        </p>
+        <p><input id="<?php echo $this->get_field_id( 'limit' ); ?>" name="<?php echo $this->get_field_name( 'limit' ); ?>" type="number" value="<?php echo esc_attr( $limit ); ?>" /></p>
+    <?php
+    }
+}
 add_action('widgets_init', create_function('', 'return register_widget("widget_post_block");'));
 add_action('widgets_init', create_function('', 'return register_widget("widget_press_block");'));
+add_action('widgets_init', create_function('', 'return register_widget("widget_cat_block");'));
 
 ?>
