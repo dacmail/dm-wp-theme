@@ -6,6 +6,13 @@
         $('.share-over').on('click', function(event) {
             event.preventDefault();
         });
+        $('.js-menu').on('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            $('.js-menu').toggleClass('is-active');
+            $('body').toggleClass('is-open-menu');
+            $('.nav-primary').toggleClass('is-open');
+        });
 	});
 	$(window).load(function() {
 		$('.tag-carousel').owlCarousel({

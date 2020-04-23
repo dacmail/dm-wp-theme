@@ -176,8 +176,14 @@ class widget_cat_block extends WP_Widget {
     <?php
     }
 }
-add_action('widgets_init', create_function('', 'return register_widget("widget_post_block");'));
-add_action('widgets_init', create_function('', 'return register_widget("widget_press_block");'));
-add_action('widgets_init', create_function('', 'return register_widget("widget_cat_block");'));
+
+add_action(
+    'widgets_init',
+    function () {
+        register_widget("widget_post_block");
+        register_widget("widget_press_block");
+        register_widget("widget_cat_block");
+    }
+);
 
 ?>

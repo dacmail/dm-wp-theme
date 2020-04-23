@@ -28,6 +28,7 @@
 		if ( function_exists('register_nav_menus')) {
 			register_nav_menus(
 				array(
+				  'primary-navigation' => esc_html__('Nuevo menú y submenús', 'ungrynerd'),
 				  'main-column-1' => esc_html__('Menu principal (Columna 1)', 'ungrynerd'),
 				  'main-column-2' => esc_html__('Menu principal (Columna 2)', 'ungrynerd'),
 				  'main-column-3' => esc_html__('Menu principal (Columna 3)', 'ungrynerd'),
