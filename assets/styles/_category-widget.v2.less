@@ -1,0 +1,44 @@
+.featured-category {
+  margin-bottom: 40px;
+
+  .title {
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 1;
+    color: #fff;
+    padding: 20px;
+    background-color: #003df6;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    margin-top: 0;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-color: #003df6;
+      bottom: -20px;
+      left: 0;
+    }
+  }
+
+  .column-3 {
+    padding-left: 20px;
+  }
+
+  .col-sm-8 & .hentry,
+  .post-column {
+    margin-bottom: 20px;
+  }
+
+  .more {
+    display: block;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 1.25;
+    text-align: right;
+    color: #003df6;
+  }
+}
