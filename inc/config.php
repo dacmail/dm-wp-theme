@@ -136,4 +136,16 @@
 	function un_summary_shortcode($atts, $content) {
 		return '<div class="c-summary">' . $content . '</div>';
 	}
+
+	add_filter('the_content', 'un_shortcode_empty_paragraph_fix');
+
+	function un_shortcode_empty_paragraph_fix($content)
+	{
+		$array = array(
+			'<p>['    => '[',
+			']</p>'   => ']',
+			']<br />' => ']'
+		);
+		return strtr($content, $array);
+	}
 ?>
