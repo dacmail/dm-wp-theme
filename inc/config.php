@@ -124,4 +124,16 @@
 		));
 	}
 	add_action('widgets_init', 'ungrynerd_widgets_init');
+
+
+
+	function un_add_custom_shortcode()
+	{
+		add_shortcode('suelto', 'un_summary_shortcode');
+	}
+	add_action('init', 'un_add_custom_shortcode');
+
+	function un_summary_shortcode($atts, $content) {
+		return '<div class="c-summary">' . $content . '</div>';
+	}
 ?>
