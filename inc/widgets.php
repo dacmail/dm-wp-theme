@@ -105,12 +105,12 @@ class widget_press_block extends WP_Widget {
         ?>
         <input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="hidden" value="<?php echo esc_attr( $title ); ?>" />
         <?php
-            $posts = new WP_Query(array('post_type' => array('un_press'), 'posts_per_page' => -1, 'post_status' => 'publish'));
+            $press = new WP_Query(array('post_type' => array('un_press'), 'posts_per_page' => 30, 'post_status' => 'publish'));
         ?>
         <p>
             <label for="<?php echo $this->get_field_id('selected_post'); ?>"><?php _e('Nota de prensa', 'ungrynerd'); ?></label>
             <select id="<?php echo $this->get_field_id('selected_post'); ?>" class="widefat" name="<?php echo $this->get_field_name('selected_post'); ?>">
-            <?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
+            <?php while ( $press->have_posts() ) : $press->the_post(); ?>
                 <option value="<?php the_ID() ?>" <?php echo (get_the_ID()==$selected_post) ? "selected" : ""; ?>><?php the_title(); ?></option>
             <?php endwhile; ?>
             </select>
