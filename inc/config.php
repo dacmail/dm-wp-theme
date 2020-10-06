@@ -124,4 +124,28 @@
 		));
 	}
 	add_action('widgets_init', 'ungrynerd_widgets_init');
+
+
+
+	function un_add_custom_shortcode()
+	{
+		add_shortcode('suelto', 'un_summary_shortcode');
+	}
+	add_action('init', 'un_add_custom_shortcode');
+
+	function un_summary_shortcode($atts, $content) {
+		return '<div class="c-summary">' . $content . '</div>';
+	}
+
+	add_filter('the_content', 'un_shortcode_empty_paragraph_fix');
+
+	function un_shortcode_empty_paragraph_fix($content)
+	{
+		$array = array(
+			'<p>['    => '[',
+			']</p>'   => ']',
+			']<br />' => ']'
+		);
+		return strtr($content, $array);
+	}
 ?>
