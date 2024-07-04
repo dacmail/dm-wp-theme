@@ -10,19 +10,7 @@
 			get_stylesheet_uri());
 
 		//If WP_DEVELOPMENT_MODE is activate use LESS files
-		if (defined('WP_DEVELOPMENT_MODE') && WP_DEVELOPMENT_MODE ) {
-			wp_enqueue_script(
-				'ungrynerd-js',
-				'//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js',
-				array('jquery'),
-				'1.0.0',
-				true);
-			wp_enqueue_style('ungrynerd-main-less',
-				get_template_directory_uri() . '/assets/styles/main.less');
-		} else {
-			wp_enqueue_style('ungrynerd-main-styles',
-				get_template_directory_uri() . '/css/main.css');
-		}
+		wp_enqueue_style('ungrynerd-main-styles', get_template_directory_uri() . '/dist/css/main.css');
 
 
 		if (!is_admin()) {
@@ -35,39 +23,8 @@
 				'',
 				true);
 
-			if (defined('WP_DEVELOPMENT_MODE') && WP_DEVELOPMENT_MODE ) {
-				wp_enqueue_script(
-					'bootstrap',
-					get_template_directory_uri() . '/assets/scripts/bootstrap.js',
-					array('jquery'),
-					'1.0.0',
-					true);
-				wp_enqueue_script(
-					'owl-carousel-2',
-					get_template_directory_uri() . '/assets/scripts/owl.carousel.min.js',
-					array('jquery'),
-					'2.1.6',
-					true);
-				wp_enqueue_script(
-					'photoswipe',
-					get_template_directory_uri() . '/assets/scripts/lightgallery.min.js',
-					array('jquery'),
-					'4.1.1',
-					true);
-				wp_enqueue_script(
-					'ungrynerd-main',
-					get_template_directory_uri() . '/assets/scripts/main.js',
-					array('jquery'),
-					'1.0.0',
-					true);
-			} else {
-				wp_enqueue_script(
-					'ungrynerd-js',
-					get_template_directory_uri() . '/js/main.js',
-					array('jquery'),
-					'1.0.0',
-					true);
-			}
+
+			wp_enqueue_script('ungrynerd-js', get_template_directory_uri() . '/dist/js/main.js', array('jquery'), '1.0.0', true);
 
 			wp_enqueue_script(
 				'html5shiv',

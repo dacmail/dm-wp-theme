@@ -1,0 +1,142 @@
+/* LAPTOPS */
+/* TABLETS HORIZONTAL */
+/*TABLETS VERTICAL*/
+@media (max-width: 991px) {
+  .main-featured .post-wrap .post-title {
+    font-size: 30px;
+    padding-right: 0;
+  }
+  .col-sm-8 .hentry {
+    padding-right: 0px;
+  }
+  .follow-us {
+    text-align: center;
+  }
+  .follow-us span {
+    display: block;
+    margin-right: 0px;
+  }
+  .widget.grupos-municipales .post {
+    background-size: 32px !important;
+    padding-left: 45px;
+    min-height: 32px;
+  }
+  .column-3 .post-title {
+    font-size: 17px;
+  }
+  .column-3 .post-content {
+    display: none;
+  }
+}
+/*MOBILE*/
+@media (max-width: 767px) {
+  .pre-header {
+    padding: 10px 0px;
+  }
+  .pre-header .logo-madrid {
+    display: none;
+  }
+  .header {
+    text-align: left;
+  }
+  .header .menu-toggle {
+    margin-top: 25px;
+  }
+  .header .logo img {
+    max-width: 225px;
+  }
+  .tag-cloud {
+    display: none;
+  }
+  .footer .navbar-nav {
+    margin: 10px 0px;
+  }
+  .copy .pull-right {
+    text-align: left;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .menus .navbar-nav {
+    margin: 0px;
+  }
+  .main-featured .post-wrap {
+    position: relative;
+    padding: 0px;
+    margin: 2px 0px 0px 0px;
+    top: 0px;
+    left: 0px;
+  }
+  .main-featured .post-wrap .post-share {
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+  .main-featured .post-wrap .post-share .share-buttons {
+    left: auto;
+    right: -150px;
+  }
+  .post-share .share-buttons a.icon.wa {
+    display: inline-block;
+  }
+  .single .post-title,
+  .page .post-title {
+    font-size: 30px;
+  }
+  .single .post-cat,
+  .page .post-cat {
+    padding: 6px 10px;
+    font-size: 15px;
+  }
+  .single .post-content .gallery.gallery-columns-1 .gallery-item .gallery-caption,
+  .page .post-content .gallery.gallery-columns-1 .gallery-item .gallery-caption {
+    position: relative;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .single .post-content blockquote,
+  .page .post-content blockquote {
+    float: none;
+    width: 100%;
+  }
+  .press-posts .post-title {
+    font-size: 16px;
+  }
+  .page .page-title {
+    font-size: 25px;
+  }
+  .archive .term-title,
+  .search .term-title {
+    font-size: 20px;
+  }
+  .archive article.hentry .wp-post-image,
+  .search article.hentry .wp-post-image {
+    display: none;
+  }
+  .archive article.hentry .post-wrapper,
+  .search article.hentry .post-wrapper,
+  .archive article.hentry.has-post-thumbnail .post-wrapper,
+  .search article.hentry.has-post-thumbnail .post-wrapper {
+    margin-left: 0px;
+  }
+  .archive article.hentry .post-wrapper .post-title,
+  .search article.hentry .post-wrapper .post-title,
+  .archive article.hentry.has-post-thumbnail .post-wrapper .post-title,
+  .search article.hentry.has-post-thumbnail .post-wrapper .post-title {
+    font-size: 20px;
+  }
+  .archive article.hentry .post-wrapper .post-share .share-buttons,
+  .search article.hentry .post-wrapper .post-share .share-buttons {
+    width: 150px;
+    left: -150px;
+  }
+  .pagination {
+    max-width: 100%;
+    width: 100%;
+  }
+  .pagination li a,
+  .pagination li span {
+    font-size: 15px;
+    padding: 0px;
+    line-height: 30px;
+  }
+}

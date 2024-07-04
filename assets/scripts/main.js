@@ -1,5 +1,9 @@
+import './lightgallery.min.js';
+import './owl.carousel.min.js';
+import './bootstrap.js';
+
 (function($) {
-	$(document).ready(function() {
+	$(document).on('ready', function() {
         $(".gallery").lightGallery({
             selector: '.gallery-icon a'
         });

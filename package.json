@@ -7,6 +7,17 @@
   ],
   "description": "Starter WordPress Theme",
   "main": "index.php",
+  "scripts": {
+    "sync": "browser-sync start --proxy \"diario.madrid.es.localhost\" --reload-delay 200 --files=[\"**/*.css\", \"wp-content/themes/**/*.php\"]",
+    "start:theme": "wp-scripts start assets/scripts/main.js --output-path=dist/js",
+    "build:theme": "wp-scripts build assets/scripts/main.j --output-path=dist/js",
+    "start:less": "less-watch-compiler --include-hidden assets/styles dist/css",
+    "build:less": "lessc assets/styles/main.less dist/css/main.css --clean-css",
+    "copy:fonts": "cpx 'assets/fonts/*{ttf,woff,eot,svg,woff2}' dist/fonts --watch",
+    "start": "npm-run-all --parallel start:theme start:less copy:fonts sync",
+    "build": "npm-run-all --parallel build:theme build:less copy:fonts",
+    "packages-update": "wp-scripts packages-update"
+  },
   "keywords": [
     "wordpress",
     "theme",
@@ -14,16 +25,22 @@
   ],
   "license": "MIT",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 20.10.0"
   },
   "devDependencies": {
-    "grunt": "^1.1.0",
-    "grunt-contrib-concat": "^0.5.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^3.0.0",
-    "grunt-contrib-less": "^1.0.1",
-    "grunt-contrib-uglify": "^4.0.1",
-    "grunt-contrib-watch": "^1.1.0",
-    "less-plugin-autoprefix": "^1.4.1"
+    "@wordpress/scripts": "^28.0.0",
+    "autoprefixer": "^10.4.19",
+    "browser-sync": "^3.0.2",
+    "cpx": "^1.5.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-promise": "^6.2.0",
+    "less": "^4.2.0",
+    "less-plugin-clean-css": "^1.5.1",
+    "less-watch-compiler": "^1.16.3",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.38",
+    "postcss-import": "^16.1.0",
+    "postcss-loader": "^8.1.1"
   }
 }
