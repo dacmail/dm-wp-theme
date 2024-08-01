@@ -3,11 +3,11 @@ import './owl.carousel.min.js';
 import './bootstrap.js';
 
 (function($) {
-	$(document).on('ready', function() {
+	$(window).on('load', function() {
         $(".gallery").lightGallery({
             selector: '.gallery-icon a'
         });
-        $('.share-over').on('click', function(event) {
+        $('.share-over').on('click', function (event) {
             event.preventDefault();
         });
         $('.js-menu').on('click', function (event) {
@@ -17,8 +17,7 @@ import './bootstrap.js';
             $('body').toggleClass('is-open-menu');
             $('.nav-primary').toggleClass('is-open');
         });
-	});
-	$(window).load(function() {
+        console.log('window loaded');
 		$('.tag-carousel').owlCarousel({
             items:7,
             margin:30,

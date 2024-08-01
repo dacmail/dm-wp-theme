@@ -3274,7 +3274,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (function ($) {
-  $(document).on('ready', function () {
+  $(window).on('load', function () {
     $(".gallery").lightGallery({
       selector: '.gallery-icon a'
     });
@@ -3288,8 +3288,7 @@ __webpack_require__.r(__webpack_exports__);
       $('body').toggleClass('is-open-menu');
       $('.nav-primary').toggleClass('is-open');
     });
-  });
-  $(window).load(function () {
+    console.log('window loaded');
     $('.tag-carousel').owlCarousel({
       items: 7,
       margin: 30,
