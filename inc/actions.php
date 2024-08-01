@@ -1,7 +1,4 @@
 <?php
-	//Change for activate development mode (using JS and CSS in assets folder)
-	define('WP_DEVELOPMENT_MODE', false);
-
 
 	//Enqueue scripts and styles
 	function ungrynerd_scripts() {
